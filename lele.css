@@ -1,0 +1,206 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f7f7;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.9);
+    width: 80%;
+    max-width: 400px;
+    position: relative;
+    z-index: 1;
+}
+
+h2 {
+    font-family: 'Georgia', serif;
+    color: #d74b79;
+}
+
+/* Button Styling */
+button {
+    background-color: #d74b79;
+    color: white;
+    border: none;
+    border-radius: 50px; /* Make button rounded */
+    padding: 15px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 15px 0;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 300px; /* Constrain width for mobile */
+}
+
+button:hover {
+    background-color: #c43a6d;
+    transform: scale(1.05); /* Slight grow on hover */
+}
+
+/* Button for Mobile: Add a ripple effect */
+button:active {
+    background-color: #b6355c;
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.error {
+    color: red;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+.modal-content {
+    margin: 15% auto;
+    display: block;
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #d74b79;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Love Letter Styling */
+.love-letter {
+    background-color: #ffe4e1;
+    border: 2px dashed #d74b79;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    font-family: 'Courier New', monospace;
+    color: #d74b79;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.love-letter h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.love-letter p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Input Fields */
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #d74b79;
+    border-radius: 5px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+/* Mobile Specific Styling */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 12px 20px;
+    }
+
+    .love-letter h2 {
+        font-size: 20px;
+    }
+
+    .love-letter p {
+        font-size: 16px;
+    }
+}
+
+/* Heart Animation */
+@keyframes moveHeart {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.heart {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url('https://www.freeiconspng.com/uploads/heart-png-24.png') no-repeat center center;
+    background-size: contain;
+    animation: moveHeart 3s infinite;
+    opacity: 0.8;
+}
+
+.heart:nth-child(1) {
+    left: 10%;
+    animation-duration: 4s;
+    animation-delay: 0s;
+}
+.heart:nth-child(2) {
+    left: 25%;
+    animation-duration: 3.5s;
+    animation-delay: 1s;
+}
+.heart:nth-child(3) {
+    left: 40%;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+}
+.heart:nth-child(4) {
+    left: 55%;
+    animation-duration: 4s;
+    animation-delay: 1.5s;
+}
+.heart:nth-child(5) {
+    left: 70%;
+    animation-duration: 3.5s;
+    animation-delay: 2s;
+}
+.heart:nth-child(6) {
+    left: 85%;
+    animation-duration: 4.5s;
+    animation-delay: 0.5s;
+}

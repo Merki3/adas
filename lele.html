@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love App</title>
+    <link rel="stylesheet" href="lele.css">
+</head>
+<body>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+
+    <div id="passwordContainer" class="container">
+        <h2>Enter Password</h2>
+        <input type="password" id="passwordInput" placeholder="Password">
+        <button onclick="checkPassword()">Submit</button>
+        <p id="errorMessage" class="error"></p>
+    </div>
+
+    <div id="mainContainer" class="container" style="display: none;">
+        <h2>Welcome!</h2>
+        <button onclick="showMessage()">Message</button>
+        <button id="songButton" onclick="showSong()">Play Song</button>
+        <button onclick="showGift()">Gift</button>
+        <button onclick="goBack()">Back</button>
+        <button onclick="startQuiz()">Quiz</button> <!-- New Quiz Button -->
+    </div>
+
+    <div id="giftModal" class="modal">
+        <span class="close" onclick="closeGiftModal()">&times;</span>
+        <h2>🎁</h2>
+        <p>Click the gift to reveal something special!</p>
+        <button id="clickMeButton" onclick="hideButtonTemporarily('clickMeButton'); showFlowerGif()">Click Me!</button>
+    </div>
+
+    <div id="messageModal" class="modal">
+        <span class="close" onclick="closeMessageModal()">&times;</span>
+        <div class="love-letter" onclick="showPhoto('https://i.ibb.co/JnHHNzH/415306067-3840698249544819-5969610147244004547-n.jpg')">
+            <h2>My Dearest</h2>
+            <p>I LOVE YOU BALII KOOO,</p>
+            <p>SIKA LANG LOVE KO PROMISE SORRY AMIN NGA BASOL KO HEHEHE.</p>
+            <p>I LOVE YOUUUUUU</p>
+        </div>
+    </div>
+
+    <div id="songModal" class="modal" style="display: none;">
+        <span class="close" onclick="closeSongModal()">&times;</span>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/6Q5xqNkCk7w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <script src="lele.js"></script>
+</body>
+</html>
